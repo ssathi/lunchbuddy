@@ -11,6 +11,17 @@ Sample Application to choose a restaurent for having lunch.
 <img width="928" alt="Screenshot 2024-03-03 at 4 22 34 PM" src="https://github.com/ssathi/lunchbuddy/assets/42490965/d2afc8e0-d683-4bd8-b326-e1abb0889e9b">
 
 
+# Api Documents Swagger and OpenAPI
+
+swagger - http://localhost:8080/swagger-ui/index.html
+<img width="1123" alt="Screenshot 2024-03-03 at 5 09 07 PM" src="https://github.com/ssathi/lunchbuddy/assets/42490965/c061e81d-3ec9-42e9-b19e-b0455526260c">
+
+
+
+openapi - http://localhost:8080/v3/api-docs
+<img width="606" alt="Screenshot 2024-03-03 at 5 07 43 PM" src="https://github.com/ssathi/lunchbuddy/assets/42490965/c705824c-5b31-4153-a1a5-150f05cfafa2">
+
+
 # Authentication
 For the purpose of user identity, I have implemented a basic authentication using spring security and jwt. This is a bare minimum implementation of authentication as It is not the focus of this assignemnt
 
@@ -125,6 +136,31 @@ curl --location 'http://localhost:8080/sessions/1/end' \
 Response:
 <img width="935" alt="Screenshot 2024-03-03 at 4 53 20 PM" src="https://github.com/ssathi/lunchbuddy/assets/42490965/132006e5-ffee-4772-ae10-18eec6b9aa17">
 
+
+
+# Questions
+1. How would you ensure that one user’s submitted location does not cause issues on
+other users’ displays?
+
+User responses has one to many relationships with the session. As such, other users will not cause issues to other users.
+
+2. How would you assure others that your application meets the requirements, and
+continues to meet the requirements even after changes have been made to it?
+
+Enough test cases are writting so it will help us to make sure the requirements are met even when the applications goes though several changes.
+
+3. How would you ensure that your application can be deployed to serve an increasing
+number of users who may be concurrently using your service?
+
+It is a web application. so many users can access the application concurrently. It can scalled by containerising and running it on k8s.
+
+4. How would you help a fellow team member who may need to debug your application
+in future?
+
+Errors are handled properly. It will give a good error message. The code is written in a way it is not complex and it is readable so other developers can undertand without issues.
+Comments are made in certain places to give more details of the functionality.
+
+api document is attached above. 
 
 
 
