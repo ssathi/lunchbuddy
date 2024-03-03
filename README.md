@@ -19,6 +19,8 @@ swagger - http://localhost:8080/swagger-ui/index.html
 
 
 openapi - http://localhost:8080/v3/api-docs
+
+
 <img width="606" alt="Screenshot 2024-03-03 at 5 07 43 PM" src="https://github.com/ssathi/lunchbuddy/assets/42490965/c705824c-5b31-4153-a1a5-150f05cfafa2">
 
 
