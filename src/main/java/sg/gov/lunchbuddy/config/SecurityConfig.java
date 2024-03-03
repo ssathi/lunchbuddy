@@ -19,8 +19,8 @@ public class SecurityConfig {
         return http.securityMatcher("/**")
                 .authorizeHttpRequests(registry ->
                         registry.requestMatchers("/auth/login").permitAll()
-                                .requestMatchers("/v3/api-docs").permitAll()
-                                .requestMatchers("/swagger-ui/index.html").permitAll()
+                                .requestMatchers("/v3/api-docs/**").permitAll()
+                                .requestMatchers("/swagger-ui/**").permitAll()
                                 .anyRequest().authenticated())
                 .csrf().disable()
                 .cors().disable()
